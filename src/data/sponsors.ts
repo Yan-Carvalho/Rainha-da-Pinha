@@ -13,7 +13,7 @@ export const organization = [
   },
   {
     name: "Robertão",
-    logo: "/src/images/Prefeito-Robertão.jpeg",
+    logo: "https://i.ibb.co/GQ13x4KW/Prefeito-Robert-o.jpg",
     role: "Prefeito",
     website: "https://www.instagram.com/robertaopdutra/",
   },
