@@ -82,6 +82,7 @@ function Footer() {
               Rainha da Pinha 2025
             </h2>
             <p className="text-gray-600">© 2025 Todos os direitos reservados</p>
+            <p className="text-gray-600">Desenvolvido por <a href="https://www.instagram.com/inovatyan?igsh=MWgwMHVidmw4djY0bQ==">Yan Carvalho</a></p>
           </div>
         </div>
       </footer>
