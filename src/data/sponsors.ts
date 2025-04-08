@@ -34,86 +34,86 @@ export const organization = [
 export const sponsors = [
   {
     name: "LH Sports",
-    logo: "/src/images/LH-Sports1.png",
+    logo: "https://i.ibb.co/6RkJ9JP6/LH-Sports1.png",
     website: "https://www.instagram.com/lhsports2001?igsh=bHc2eWt6NXI5dDgy",
   },
   {
     name: "JE Blocos e Pisos",
-    logo: "/src/images/JE-Blocos-e-Pisos.png",
+    logo: "https://i.ibb.co/5WRJ9zvF/JE-Blocos-e-Pisos.png",
     website: "https://www.instagram.com/jeblocosepisos/",
   },
   {
     name: "Renato Carvalho",
-    logo: "/src/images/RCA-Renato-Carvalho.png",
+    logo: "https://i.ibb.co/5mJBM8y/RCA-Renato-Carvalho.png",
     website:
       "https://www.instagram.com/rcaprojetoseservicos?igsh=cmY0dGx0ZGpyb3Qz",
   },
   {
     name: "Yan Carvalho",
-    logo: "/src/images/Yan-Carvalho-logo-2.png",
+    logo: "https://i.ibb.co/FkQxK3TG/Yan-Carvalho-logo-2.png",
     website: "https://www.devassa.com.br/",
   },
   {
     name: "Coodenadoria de Cultura",
-    logo: "/src/images/Coordenadoria-de-Cultura.png",
+    logo: "https://i.ibb.co/kgHf4htD/Coordenadoria-de-Cultura.png",
     website: "https://www.devassa.com.br/",
   },
   {
     name: "Diego Carneiro",
-    logo: "/src/images/Diego-Carneiro-Designer.png",
+    logo: "https://i.ibb.co/XxbPnfw0/Diego-Carneiro-Designer.png",
     website:
       "https://www.instagram.com/diegocarneirodesign?igsh=ajJlajlxcnNuamhz",
   },
   {
     name: "Coco Mel",
-    logo: "/src/images/Coco-Mel.png",
+    logo: "https://i.ibb.co/zWNzyPWw/Coco-Mel.png",
     website: "https://www.devassa.com.br/",
   },
   {
     name: "Galpão da Construção",
-    logo: "/src/images/Galpao-da-Construcao.png",
+    logo: "https://i.ibb.co/jk71x5jn/Galpao-da-Construcao.png",
     website:
       "https://www.instagram.com/galpao_construcao?igsh=djN5NnB5amVta213",
   },
   {
     name: "Pitú",
-    logo: "/src/images/Pitu.png",
+    logo: "https://i.ibb.co/vC9yPtgQ/Pitu.png",
     website: "https://pitu.com.br/",
   },
   {
     name: "shopping do Médico",
-    logo: "/src/images/Shopping-do-Medico.png",
+    logo: "https://i.ibb.co/VYcLy9kv/Shopping-do-Medico.png",
     website: "https://www.instagram.com/shoppingdomedico/",
   },
   {
     name: "Pneuscar",
-    logo: "/src/images/Pneuscar.png",
+    logo: "https://i.ibb.co/ynFD3HSZ/Pneuscar.png",
     website: "https://www.instagram.com/pneuscar.irece?igsh=YmNpMGs2cG8wZmRr",
   },
   {
     name: "Óticas Real",
-    logo: "/src/images/Oticas-Real.png",
+    logo: "https://i.ibb.co/LXN4SWMv/Oticas-Real.png",
     website: "https://www.devassa.com.br/",
   },
   {
     name: "João da Cruz",
-    logo: "/src/images/Joao-da-Cruz.png",
+    logo: "https://i.ibb.co/HpTG1Ydw/Joao-da-Cruz.png",
     website: "https://www.devassa.com.br/",
   },
   {
     name: "Irecê Informática",
-    logo: "/src/images/Irece-Informatica.png",
+    logo: "https://i.ibb.co/8nMJbjH2/Irece-Informatica.png",
     website:
       "https://www.instagram.com/irece_informatica?igsh=ZjJlano1dm45aHZi",
   },
   {
     name: "Flávio Lanches",
-    logo: "/src/images/Flavio-Lanches.png",
+    logo: "https://i.ibb.co/GfmZynKd/Flavio-Lanches.png",
     website: "https://www.instagram.com/flavio.lanches?igsh=NjdlMW00d2F2dXY1",
   },
   {
-    name: "Dedetizador Silva",
-    logo: "/src/images/Dedetizador-Silva.png",
+    name: "Dedetizadora Silva",
+    logo: "https://i.ibb.co/20Jm9sJ2/Dedetizador-Silva.png",
     website: "https://www.devassa.com.br/",
   },
 ];
