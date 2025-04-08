@@ -93,7 +93,7 @@ export const sponsors = [
   {
     name: "Óticas Real",
     logo: "https://i.ibb.co/LXN4SWMv/Oticas-Real.png",
-    website: ",
+    website: "",
   },
   {
     name: "João da Cruz",
