@@ -17,7 +17,7 @@ function ContestPage() {
           style={{
             // backgroundImage:
             //   'url("https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=2000&q=80")',
-            backgroundImage: `url(${bgFesta})`,
+            backgroundSize: window.innerWidth < 768 ? "cover" : "70%",
             backgroundSize: "70%",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",
