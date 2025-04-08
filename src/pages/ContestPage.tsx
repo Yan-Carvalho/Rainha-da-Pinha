@@ -15,11 +15,8 @@ function ContestPage() {
         <div
           className="absolute inset-0 bg-cover bg-center"
           style={{
-            // backgroundImage:
-            //   'url("https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=2000&q=80")',
-            backgroundSize: window.innerWidth < 768 ? "cover" : "70%",
-            backgroundPosition: "center",
-            backgroundRepeat: "no-repeat",
+            backgroundImage:
+              'url("https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=2000&q=80")',
           }}
         >
           {/* Dark Overlay with Gradient */}
