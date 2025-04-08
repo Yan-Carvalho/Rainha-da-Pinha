@@ -51,12 +51,12 @@ export const sponsors = [
   {
     name: "Yan Carvalho",
     logo: "https://i.ibb.co/FkQxK3TG/Yan-Carvalho-logo-2.png",
-    website: "https://www.devassa.com.br/",
+    website: "https://www.instagram.com/inovatyan?igsh=MWgwMHVidmw4djY0bQ==",
   },
   {
     name: "Coodenadoria de Cultura",
     logo: "https://i.ibb.co/kgHf4htD/Coordenadoria-de-Cultura.png",
-    website: "https://www.devassa.com.br/",
+    website: "",
   },
   {
     name: "Diego Carneiro",
@@ -67,7 +67,7 @@ export const sponsors = [
   {
     name: "Coco Mel",
     logo: "https://i.ibb.co/zWNzyPWw/Coco-Mel.png",
-    website: "https://www.devassa.com.br/",
+    website: "",
   },
   {
     name: "Galpão da Construção",
@@ -93,12 +93,12 @@ export const sponsors = [
   {
     name: "Óticas Real",
     logo: "https://i.ibb.co/LXN4SWMv/Oticas-Real.png",
-    website: "https://www.devassa.com.br/",
+    website: ",
   },
   {
     name: "João da Cruz",
     logo: "https://i.ibb.co/HpTG1Ydw/Joao-da-Cruz.png",
-    website: "https://www.devassa.com.br/",
+    website: "",
   },
   {
     name: "Irecê Informática",
@@ -114,6 +114,6 @@ export const sponsors = [
   {
     name: "Dedetizadora Silva",
     logo: "https://i.ibb.co/20Jm9sJ2/Dedetizador-Silva.png",
-    website: "https://www.devassa.com.br/",
+    website: "",
   },
 ];
