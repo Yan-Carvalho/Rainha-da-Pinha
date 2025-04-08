@@ -7,7 +7,7 @@ interface Organization {
 export const organization = [
   {
     name: "Prefeitura Municipal de Presidente Dutra BA",
-    logo: "/src/images/PresidenteDutra.png",
+    logo: "https://i.ibb.co/d42gxGP7/Presidente-Dutra.png",
     role: "Realizador",
     website: "http://www.presidentedutra.ba.gov.br",
   },
@@ -19,13 +19,13 @@ export const organization = [
   },
   {
     name: "Devassa",
-    logo: "/src/images/Devassa.png",
+    logo: "https://i.ibb.co/ZzNTR7nP/Devassa.png",
     role: "Patrocínio Master",
     website: "https://www.devassa.com.br/",
   },
   {
     name: "Governo da Bahia",
-    logo: "/src/images/Governo-do-Estado-da-Bahia-SUFOTUR.png",
+    logo: "https://i.ibb.co/HD8HQgSV/Governo-do-Estado-da-Bahia-SUFOTUR.png",
     role: "Governo",
     website: "https://www.ba.gov.br/sufotur/",
   },
