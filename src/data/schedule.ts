@@ -4,7 +4,7 @@ export const schedule = [
     events: [
       {
         time: "15:00",
-        artist: "Marcos Machadoo",
+        artist: "Marcos Machado",
         location: "Barracão",
       },
       {
