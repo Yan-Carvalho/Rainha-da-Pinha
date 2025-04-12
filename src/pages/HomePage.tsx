@@ -14,7 +14,7 @@ import Footer from "../components/Footer";
 import Patrocinadores from "../components/Patrocinadores";
 import RainhaPinha from "../components/RainhaPinha";
 import logo from "../images/Rpnb2.png";
-import rainha from "../images/carla_cristina.jpg";
+import rainha from "../images/carla_cristina.jpeg";
 
 function HomePage() {
   const navigate = useNavigate();
