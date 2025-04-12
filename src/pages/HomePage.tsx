@@ -14,7 +14,7 @@ import Footer from "../components/Footer";
 import Patrocinadores from "../components/Patrocinadores";
 import RainhaPinha from "../components/RainhaPinha";
 import logo from "../images/Rpnb2.png";
-import rainha from "../images/Rainha2024.jpg";
+import rainha from "../images/carla_cristina.jpg";
 
 function HomePage() {
   const navigate = useNavigate();
@@ -189,13 +189,13 @@ function HomePage() {
               <div className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-2xl transform hover:scale-105 transition-transform duration-300">
                 <img
                   src={rainha}
-                  alt="Rainha da Pinha 2024"
+                  alt="Rainha da Pinha 2025"
                   className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white text-center">
-                  <h3 className="text-2xl font-bold mb-2">Letícia</h3>
-                  <p className="text-white/90">Rainha da Pinha 2024</p>
+                  <h3 className="text-2xl font-bold mb-2">Carla Cristina</h3>
+                  <p className="text-white/90">Rainha da Pinha 2025</p>
                 </div>
               </div>
             </div>
