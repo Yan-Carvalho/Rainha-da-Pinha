@@ -194,7 +194,7 @@ function HomePage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white text-center">
-                  <h3 className="text-2xl font-bold mb-2">Letícia</h3>
+                  <h3 className="text-2xl font-bold mb-2">Carla Cristina</h3>
                   <p className="text-white/90">Rainha da Pinha 2025</p>
                 </div>
               </div>
