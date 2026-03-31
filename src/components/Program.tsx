@@ -363,94 +363,254 @@
 
 // export default Program;
 
-import React, { useState, useEffect, useRef, useMemo } from "react";
-import { Star, Music, MapPin } from "lucide-react";
+// import React, { useState, useEffect, useRef, useMemo } from "react";
+// import { Star, Music, MapPin } from "lucide-react";
+
+// const Program: React.FC = () => {
+//   const [isMeteorVisible, setIsMeteorVisible] = useState(false);
+//   const sectionRef = useRef<HTMLElement>(null);
+
+//   useEffect(() => {
+//     const observer = new IntersectionObserver(
+//       ([entry]) => setIsMeteorVisible(entry.isIntersecting),
+//       { threshold: 0.1 },
+//     );
+//     if (sectionRef.current) observer.observe(sectionRef.current);
+//     return () => observer.disconnect();
+//   }, []);
+
+//   // Lista Unificada de Artistas (Sem dias, horários ou separação de palco)
+//   const artistas = useMemo(
+//     () => [
+//       {
+//         name: "Tony Salles",
+//         isMain: true,
+//         img: "/images/TonySalles.webp",
+//       },
+//       {
+//         name: "Thiago Aquino",
+//         isMain: true,
+//         img: "/images/ThiagoAquino.webp",
+//       },
+//       {
+//         name: "Rubynho",
+//         isMain: true,
+//         img: "/images/Rubynho.webp",
+//       },
+//       {
+//         name: "Leozinho",
+//         isMain: true,
+//         img: "/images/Leozinho.webp",
+//       },
+//       {
+//         name: "Klessinha",
+//         isMain: true,
+//         img: "/images/Klessinha.webp",
+//       },
+//       {
+//         name: "Iguinho e Lulinha",
+//         isMain: true,
+//         img: "/images/iguinhoElulinha.webp",
+//       },
+//       {
+//         name: "Chicafé",
+//         isMain: true,
+//         img: "/images/Chicafe.webp",
+//       },
+//     ],
+//     [],
+//   );
+
+//   return (
+//     <section
+//       id="programacao"
+//       ref={sectionRef}
+//       className="relative min-h-screen bg-gradient-to-b from-[#202BB0] via-[#1a238a] to-[#202BB0] pt-12 pb-48 overflow-hidden"
+//     >
+//       {/* Meteor Falling Stars - Mantido conforme original */}
+//       <div className={`meteor-container ${isMeteorVisible ? "active" : ""}`}>
+//         {[...Array(15)].map((_, i) => (
+//           <span key={i}></span>
+//         ))}
+//       </div>
+
+//       {/* Dynamic Background Effects */}
+//       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-[#EC4899]/30 to-transparent rounded-full blur-[140px] -z-10 translate-x-1/2 -translate-y-1/2"></div>
+//       <div className="absolute bottom-40 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-[#22D3EE]/20 to-transparent rounded-full blur-[120px] -z-10 -translate-x-1/2"></div>
+
+//       <div className="flex flex-col items-center relative z-10">
+//         {/* Banner Principal - Estendido para 1920px */}
+//         <div className="w-full max-w-[1280px] px-4 mb-16">
+//           <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-[6px] border-white group">
+//             <div className="absolute inset-0 bg-gradient-to-r from-[#202BB0]/30 via-[#202BB0]/10 to-transparent z-10"></div>
+//             <img
+//               src="/images/Cantores.webp"
+//               alt="Banner Oficial"
+//               loading="lazy"
+//               className="w-full h-100 md:h-125 object-cover object-top transition-transform duration-700 group-hover:scale-105"
+//             />
+//             <div className="absolute inset-0 bg-gradient-to-l from-[#202BB0]/30 via-[#202BB0]/10 to-transparent z-10"></div>
+//             <div className="absolute inset-0 z-20 p-10 md:p-20 flex flex-col justify-center text-white">
+//               <div className="inline-block w-fit px-4 py-1.5 bg-[#FACC15] text-[#202BB0] rounded-full text-xs font-black uppercase tracking-widest mb-6 shadow-lg">
+//                 Programação 2026
+//               </div>
+//               <h2 className="text-5xl md:text-8xl font-black uppercase italic tracking-tighter leading-none mb-3">
+//                 O Palco vai <br />
+//                 <span className="text-[#22D3EE] drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">
+//                   Ferver!
+//                 </span>
+//               </h2>
+//             </div>
+//           </div>
+//         </div>
+
+//         {/* Grid de Cards - Centralizado em 1280px */}
+//         <div className="w-full max-w-[1280px] px-4">
+//           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+//             {artistas.map((show, idx) => (
+//               <article
+//                 key={idx}
+//                 className={`group relative flex flex-col rounded-[2.5rem] border-[4px] transition-all duration-300 hover:scale-[1.03] bg-white shadow-xl overflow-hidden ${
+//                   show.isMain
+//                     ? "border-[#EC4899] shadow-[#EC4899]/10"
+//                     : "border-white hover:border-[#22D3EE]/30"
+//                 }`}
+//               >
+//                 {/* Imagem em Aspect Ratio 4/5 */}
+//                 <div className="relative aspect-[4/5] overflow-hidden">
+//                   <img
+//                     src={`${show.img}?auto=format&fit=crop&q=80&w=600`}
+//                     alt={show.name}
+//                     loading="lazy"
+//                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+//                   />
+//                   {show.isMain && (
+//                     <div className="absolute top-4 right-4 z-20">
+//                       <Star
+//                         className="text-[#FACC15] fill-[#FACC15] animate-pulse shadow-glow"
+//                         size={32}
+//                       />
+//                     </div>
+//                   )}
+//                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
+//                 </div>
+
+//                 {/* Conteúdo do Card */}
+//                 <div className="p-6 bg-white">
+//                   <div className="flex items-center justify-between">
+//                     <h3
+//                       className={`font-black text-2xl uppercase tracking-tight ${show.isMain ? "text-[#202BB0]" : "text-slate-800"}`}
+//                     >
+//                       {show.name}
+//                     </h3>
+//                     {show.isMain ? (
+//                       <div className="bg-[#EC4899] p-2 rounded-xl text-white">
+//                         <Star size={20} fill="currentColor" />
+//                       </div>
+//                     ) : (
+//                       <div className="bg-slate-100 p-2 rounded-xl text-slate-400">
+//                         <Music size={20} />
+//                       </div>
+//                     )}
+//                   </div>
+//                   <div className="flex items-center gap-1.5 mt-2 opacity-70">
+//                     <MapPin
+//                       size={14}
+//                       className={
+//                         show.isMain ? "text-[#EC4899]" : "text-[#22D3EE]"
+//                       }
+//                     />
+//                     <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600">
+//                       Atração Confirmada
+//                     </span>
+//                   </div>
+//                 </div>
+//               </article>
+//             ))}
+//           </div>
+//         </div>
+//       </div>
+
+//       {/* Onda Decorativa mantida */}
+//       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
+//         <svg
+//           className="relative block w-full h-[120px] md:h-[180px]"
+//           viewBox="0 0 1200 120"
+//           preserveAspectRatio="none"
+//         >
+//           <path
+//             d="M0,120 V80 C200,30 400,130 600,80 C800,30 1000,130 1200,80 V120 Z"
+//             fill="#f9fafb"
+//           ></path>
+//         </svg>
+//       </div>
+//     </section>
+//   );
+// };
+
+// export default Program;
+
+
+import React, { useMemo } from "react";
+
+// SVGs Inline - Eliminam a dependência de JS externo e o erro de "Cadeia Crítica"
+const IconStar = ({ className = "" }) => (
+  <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" /></svg>
+);
+
+const IconMusic = () => (
+  <svg xmlns="http://w3.org" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M9 18V5l12-2v13" /><circle cx="6" cy="18" r="3" /><circle cx="18" cy="16" r="3" /></svg>
+);
+
+const IconMapPin = ({ className = "" }) => (
+  <svg xmlns="http://w3.org" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>
+);
 
 const Program: React.FC = () => {
-  const [isMeteorVisible, setIsMeteorVisible] = useState(false);
-  const sectionRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => setIsMeteorVisible(entry.isIntersecting),
-      { threshold: 0.1 },
-    );
-    if (sectionRef.current) observer.observe(sectionRef.current);
-    return () => observer.disconnect();
-  }, []);
-
-  // Lista Unificada de Artistas (Sem dias, horários ou separação de palco)
   const artistas = useMemo(
     () => [
-      {
-        name: "Tony Salles",
-        isMain: true,
-        img: "/images/TonySalles.webp",
-      },
-      {
-        name: "Thiago Aquino",
-        isMain: true,
-        img: "/images/ThiagoAquino.webp",
-      },
-      {
-        name: "Rubynho",
-        isMain: true,
-        img: "/images/Rubynho.webp",
-      },
-      {
-        name: "Leozinho",
-        isMain: true,
-        img: "/images/Leozinho.webp",
-      },
-      {
-        name: "Klessinha",
-        isMain: true,
-        img: "/images/Klessinha.webp",
-      },
-      {
-        name: "Iguinho e Lulinha",
-        isMain: true,
-        img: "/images/iguinhoElulinha.webp",
-      },
-      {
-        name: "Chicafé",
-        isMain: true,
-        img: "/images/Chicafe.webp",
-      },
+      { name: "Tony Salles", isMain: true, img: "/images/TonySalles.webp" },
+      { name: "Thiago Aquino", isMain: true, img: "/images/ThiagoAquino.webp" },
+      { name: "Rubynho", isMain: true, img: "/images/Rubynho.webp" },
+      { name: "Leozinho", isMain: true, img: "/images/Leozinho.webp" },
+      { name: "Klessinha", isMain: true, img: "/images/Klessinha.webp" },
+      { name: "Iguinho e Lulinha", isMain: true, img: "/images/iguinhoElulinha.webp" },
+      { name: "Chicafé", isMain: true, img: "/images/Chicafe.webp" },
     ],
-    [],
+    []
   );
 
   return (
     <section
       id="programacao"
-      ref={sectionRef}
       className="relative min-h-screen bg-gradient-to-b from-[#202BB0] via-[#1a238a] to-[#202BB0] pt-12 pb-48 overflow-hidden"
     >
-      {/* Meteor Falling Stars - Mantido conforme original */}
-      <div className={`meteor-container ${isMeteorVisible ? "active" : ""}`}>
+      {/* Meteoros - Agora ativos por padrão (o CSS controla a performance via GPU) */}
+      <div className="meteor-container active">
         {[...Array(15)].map((_, i) => (
           <span key={i}></span>
         ))}
       </div>
 
-      {/* Dynamic Background Effects */}
+      {/* Background Glows */}
       <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-gradient-to-br from-[#EC4899]/30 to-transparent rounded-full blur-[140px] -z-10 translate-x-1/2 -translate-y-1/2"></div>
       <div className="absolute bottom-40 left-0 w-[500px] h-[500px] bg-gradient-to-tr from-[#22D3EE]/20 to-transparent rounded-full blur-[120px] -z-10 -translate-x-1/2"></div>
 
       <div className="flex flex-col items-center relative z-10">
-        {/* Banner Principal - Estendido para 1920px */}
+        {/* Banner Principal */}
         <div className="w-full max-w-[1280px] px-4 mb-16">
           <div className="relative rounded-[3rem] overflow-hidden shadow-2xl border-[6px] border-white group">
             <div className="absolute inset-0 bg-gradient-to-r from-[#202BB0]/30 via-[#202BB0]/10 to-transparent z-10"></div>
             <img
-              src="/images/Cantores.webp"
+              src="/images/Cantores.webp?w=1280&q=80" // Força o redimensionamento no servidor
               alt="Banner Oficial"
               loading="lazy"
+              decoding="async"
+              width="1280"
+              height="500"
               className="w-full h-100 md:h-125 object-cover object-top transition-transform duration-700 group-hover:scale-105"
             />
-            <div className="absolute inset-0 bg-gradient-to-l from-[#202BB0]/30 via-[#202BB0]/10 to-transparent z-10"></div>
-            <div className="absolute inset-0 z-20 p-10 md:p-20 flex flex-col justify-center text-white">
+            <div className="absolute inset-0 z-20 p-10 md:p-20 flex flex-col justify-center text-white pointer-events-none">
               <div className="inline-block w-fit px-4 py-1.5 bg-[#FACC15] text-[#202BB0] rounded-full text-xs font-black uppercase tracking-widest mb-6 shadow-lg">
                 Programação 2026
               </div>
@@ -464,7 +624,7 @@ const Program: React.FC = () => {
           </div>
         </div>
 
-        {/* Grid de Cards - Centralizado em 1280px */}
+        {/* Grid de Cards */}
         <div className="w-full max-w-[1280px] px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {artistas.map((show, idx) => (
@@ -473,53 +633,38 @@ const Program: React.FC = () => {
                 className={`group relative flex flex-col rounded-[2.5rem] border-[4px] transition-all duration-300 hover:scale-[1.03] bg-white shadow-xl overflow-hidden ${
                   show.isMain
                     ? "border-[#EC4899] shadow-[#EC4899]/10"
-                    : "border-white hover:border-[#22D3EE]/30"
+                    : "border-white"
                 }`}
               >
-                {/* Imagem em Aspect Ratio 4/5 */}
                 <div className="relative aspect-[4/5] overflow-hidden">
                   <img
-                    src={`${show.img}?auto=format&fit=crop&q=80&w=600`}
+                    src={`${show.img}?auto=format&fit=crop&q=80&w=600`} // Ajuste para 600px como sugerido pelo Lighthouse
                     alt={show.name}
                     loading="lazy"
+                    decoding="async"
+                    width="600"
+                    height="750"
                     className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                   />
                   {show.isMain && (
-                    <div className="absolute top-4 right-4 z-20">
-                      <Star
-                        className="text-[#FACC15] fill-[#FACC15] animate-pulse shadow-glow"
-                        size={32}
-                      />
+                    <div className="absolute top-4 right-4 z-20 text-[#FACC15] animate-pulse">
+                      <IconStar className="drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]" />
                     </div>
                   )}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-60"></div>
                 </div>
 
-                {/* Conteúdo do Card */}
                 <div className="p-6 bg-white">
                   <div className="flex items-center justify-between">
-                    <h3
-                      className={`font-black text-2xl uppercase tracking-tight ${show.isMain ? "text-[#202BB0]" : "text-slate-800"}`}
-                    >
+                    <h3 className={`font-black text-2xl uppercase tracking-tight ${show.isMain ? "text-[#202BB0]" : "text-slate-800"}`}>
                       {show.name}
                     </h3>
-                    {show.isMain ? (
-                      <div className="bg-[#EC4899] p-2 rounded-xl text-white">
-                        <Star size={20} fill="currentColor" />
-                      </div>
-                    ) : (
-                      <div className="bg-slate-100 p-2 rounded-xl text-slate-400">
-                        <Music size={20} />
-                      </div>
-                    )}
+                    <div className={show.isMain ? "text-[#EC4899]" : "text-slate-400"}>
+                      {show.isMain ? <IconStar /> : <IconMusic />}
+                    </div>
                   </div>
                   <div className="flex items-center gap-1.5 mt-2 opacity-70">
-                    <MapPin
-                      size={14}
-                      className={
-                        show.isMain ? "text-[#EC4899]" : "text-[#22D3EE]"
-                      }
-                    />
+                    <IconMapPin className={show.isMain ? "text-[#EC4899]" : "text-[#22D3EE]"} />
                     <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-600">
                       Atração Confirmada
                     </span>
@@ -531,17 +676,10 @@ const Program: React.FC = () => {
         </div>
       </div>
 
-      {/* Onda Decorativa mantida */}
+      {/* Onda Decorativa */}
       <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-[0] z-20 pointer-events-none">
-        <svg
-          className="relative block w-full h-[120px] md:h-[180px]"
-          viewBox="0 0 1200 120"
-          preserveAspectRatio="none"
-        >
-          <path
-            d="M0,120 V80 C200,30 400,130 600,80 C800,30 1000,130 1200,80 V120 Z"
-            fill="#f9fafb"
-          ></path>
+        <svg className="relative block w-full h-[120px] md:h-[180px]" viewBox="0 0 1200 120" preserveAspectRatio="none">
+          <path d="M0,120 V80 C200,30 400,130 600,80 C800,30 1000,130 1200,80 V120 Z" fill="#f9fafb"></path>
         </svg>
       </div>
     </section>
