@@ -144,19 +144,31 @@ const Hero: React.FC = () => {
       <div className="absolute inset-0 -z-20">
         <video
           autoPlay
-          loop
           muted
+          loop
           playsInline
-          className="w-full h-full object-cover"
           poster="/hero-thumb.webp"
+          className="w-full h-full object-cover"
         >
-          {/* O navegador escolhe o vídeo automaticamente baseado na largura da tela */}
+          {/* MOBILE: Tenta WebM primeiro (mais leve), depois MP4 como fallback */}
           <source
             src="/vHero-mobile.webm"
             type="video/webm"
             media="(max-width: 767px)"
           />
+          <source
+            src="/vHero-mobile.mp4"
+            type="video/mp4"
+            media="(max-width: 767px)"
+          />
+          {/* DESKTOP: Tenta WebM (se você tiver), senão vai para o MP4 padrão */}
+          <source
+            src="/vHero.webm"
+            type="video/webm"
+            media="(min-width: 768px)"
+          />
           <source src="/vHero.mp4" type="video/mp4" />
+          Seu navegador não suporta vídeos.
         </video>
 
         {/* Overlay Escuro */}
