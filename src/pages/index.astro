@@ -1,0 +1,110 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.tsx';
+import Hero from '../components/Hero.tsx';
+import About from '../components/About.tsx';
+import Program from '../components/Program.tsx';
+import Contest from '../components/Contest.tsx';
+import Registration from '../components/Registration.tsx';
+import Gallery from '../components/Gallery.tsx';
+import Sponsors from '../components/Sponsors.tsx';
+import SocialWall from '../components/SocialWall.tsx';
+import Footer from '../components/Footer.tsx';
+
+// Configurações de SEO
+const title = "Rainha da Pinha - Presidente Dutra, BA";
+const description = "Curta a Festa da Rainha da Pinha 2026 de 10 a 12 de abril em Presidente Dutra, BA! Veja a programação oficial e a galeria de fotos.";
+const siteURL = "https://rainhadapinha.com.br";
+---
+
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- SEO Básico -->
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <meta name="author" content="Yan Carvalho" /> 
+    <link rel="author" href="https://yancarvalhodev.com.br" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href={siteURL} />
+    <link rel="icon" type="image/svg+xml" href="/lrpd26.svg">
+
+    <!-- Open Graph (Facebook / WhatsApp) -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content={siteURL} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={`${siteURL}/logo_rp26.png`} />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:title" content={title} />
+    <meta property="twitter:description" content={description} />
+    <meta property="twitter:image" content={`${siteURL}/logo_rp26.png`} />
+
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Event",
+      "name": "Rainha da Pinha 2026 - Presidente Dutra, BA",
+      "description": "Curta a Festa da Rainha da Pinha 2026 de 10 a 12 de abril em Presidente Dutra, BA! Veja a programação oficial e a galeria de fotos.",
+      "image": "https://rainhadapinha.com.br/logo_rp26.png",
+      "startDate": "2026-04-10T18:00:00-03:00",
+      "endDate": "2026-04-12T23:59:00-03:00",
+      "location": {
+        "@type": "Place",
+        "name": "Presidente Dutra",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Presidente Dutra",
+          "addressRegion": "BA",
+          "addressCountry": "BR"
+        }
+      },
+      "organizer": {
+        "@type": "Organization",
+        "name": "Prefeitura de Presidente Dutra"
+      }
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://rainhadapinha.com.br",
+      "url": "https://rainhadapinha.com.br",
+      "name": "Rainha da Pinha 2026",
+      "publisher": {
+        "@type": "Person",
+        "name": "Yan Carvalho",
+        "url": "https://yancarvalhodev.com.br"
+      }
+    }
+  ]
+}
+</script>
+
+    <!-- Preload de Fontes Críticas (Melhora o LCP) -->
+    <link rel="preload" href="/fonts/fredoka-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+    <link rel="preload" href="/fonts/montserrat-v31-latin-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+  </head>
+
+  <body class="bg-pattern-fluid">
+    
+    <Header client:load />
+
+    <main>
+      <Hero client:load />
+      <Program client:visible />
+      <Contest client:visible />
+      <Gallery client:visible />
+      <About client:visible />
+      <Sponsors client:visible />
+    </main>
+
+    <Footer />
+
+  </body>
+</html>
