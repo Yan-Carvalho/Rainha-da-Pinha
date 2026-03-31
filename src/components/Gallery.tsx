@@ -105,8 +105,6 @@ const CandidateCard = ({ candidate, activeId, setActiveId }: any) => {
           alt={candidate.name}
           loading="lazy" 
           decoding="async"
-          width="637" 
-          height="956"
           className={`w-full h-full object-cover transition-transform duration-1000 opacity-80 
             lg:group-hover:scale-110 lg:group-hover:opacity-100 
             ${isActive ? "scale-110 opacity-100" : "scale-100 opacity-80"}`}
