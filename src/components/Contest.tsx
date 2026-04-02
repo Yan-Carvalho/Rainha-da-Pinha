@@ -25,10 +25,12 @@ const Contest: React.FC = () => {
             {/* Background Glow */}
             <div className="absolute -inset-6 bg-gradient-to-tr from-cyan-400 via-pink-500 to-yellow-400 opacity-20 blur-3xl group-hover:opacity-40 transition-opacity rounded-full"></div>
 
-            <div className="relative z-10 aspect-4/5.5 bg-blue-950 rounded-[4rem] overflow-hidden shadow-2xl transform hover:-rotate-1 transition-transform duration-700 border-8 border-white">
+            <div className="relative z-10 bg-blue-950 rounded-[4rem] aspect-[421/485] md:aspect-[476/589] w-full overflow-hidden shadow-2xl transform hover:-rotate-1 transition-transform duration-700 border-8 border-white">
               <img
-                src="/carla_cristina.jpeg"
+                src="/carla_cristina.webp"
                 alt="Rainha da Pinha 2025"
+                loading="lazy"     
+                decoding="async"    
                 className="w-full h-full object-cover opacity-90 transition-all duration-700 group-hover:scale-105"
               />
 
