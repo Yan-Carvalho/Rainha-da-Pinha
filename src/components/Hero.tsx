@@ -139,7 +139,7 @@ const Hero: React.FC = () => {
           muted
           loop
           playsInline
-          poster="/hero-thumb.webp"
+          {/* poster="/hero-thumb.webp" */}
           className="w-full h-full object-cover"
         >
           {/* MOBILE: Tenta WebM primeiro (mais leve), depois MP4 como fallback */}
