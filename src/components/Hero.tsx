@@ -138,7 +138,8 @@ const Hero: React.FC = () => {
           autoPlay
           muted
           loop
-          playsInline          
+          playsInline        
+          poster="/hero-thumb.webp"
           className="w-full h-full object-cover"
         >
           {/* MOBILE: Tenta WebM primeiro (mais leve), depois MP4 como fallback */}
