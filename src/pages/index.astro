@@ -22,7 +22,6 @@ const siteURL = "https://rainhadapinha.com.br";
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preload" as="image" href="/logo_rp26.png" fetchpriority="high">
     
-    <!-- SEO Básico -->
     <title>{title}</title>
     <meta name="description" content={description} />
     <meta name="author" content="Yan Carvalho" /> 
@@ -49,7 +48,7 @@ const siteURL = "https://rainhadapinha.com.br";
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@graph":,
+  "@graph": [
       "startDate": "2026-04-10T18:00:00-03:00",
       "endDate": "2026-04-12T23:59:00-03:00",
       "eventStatus": "https://schema.org",
@@ -98,7 +97,6 @@ const siteURL = "https://rainhadapinha.com.br";
 }
 </script>
 
-    <!-- Preload de Fontes Críticas (Melhora o LCP) -->
     <link rel="preload" href="/fonts/fredoka-v17-latin-700.woff2" as="font" type="font/woff2" crossorigin="anonymous">
     <link rel="preload" href="/fonts/montserrat-v31-latin-900.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   </head>
@@ -109,11 +107,11 @@ const siteURL = "https://rainhadapinha.com.br";
 
     <main>
       <Hero client:load />
-      <Program client:idle />
-      <Contest client:idle />
-      <Gallery client:idle />
-      <About client:idle />
-      <Sponsors client:idle />
+      <Program client:visible />
+      <Contest client:visible />
+      <Gallery client:visible />
+      <About client:visible />
+      <Sponsors />
     </main>
 
     <Footer />
