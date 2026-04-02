@@ -6,7 +6,7 @@ import tailwindcss from "@tailwindcss/vite";
 // https://astro.build/config
 export default defineConfig({
   // 1. Define a URL oficial (sem www e sem barra, como conversamos)
-  site: "https://www.rainhadapinha.com.br",
+  site: "https://rainhadapinha.com.br",
 
   // 2. Força o Astro a NÃO colocar a barra no final das URLs (opcional, mas limpo)
   trailingSlash: "never",
