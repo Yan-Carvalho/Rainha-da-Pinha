@@ -425,8 +425,9 @@ const Program: React.FC = () => {
     <section
       id="programacao"
       ref={sectionRef}
-      className="relative min-h-screen bg-gradient-to-b from-[#202BB0] via-[#1a238a] to-[#202BB0] pt-12 pb-48 overflow-hidden"
+      className="relative min-h-[90vh] md:min-h-screen bg-gradient-to-b from-[#202BB0] via-[#1a238a] to-[#202BB0] pt-16 pb-24 md:pt-24 md:pb-48 overflow-hidden"
     >
+      {/* className="relative min-h-screen bg-gradient-to-b from-[#202BB0] via-[#1a238a] to-[#202BB0] pt-12 pb-48 overflow-hidden" */}
       {/* Meteor Falling Stars - Mantido conforme original */}
       <div className={`meteor-container ${isMeteorVisible ? "active" : ""}`}>
         {[...Array(15)].map((_, i) => (
