@@ -15,7 +15,7 @@ const Contest: React.FC = () => {
           </span>
           <h2 className="text-5xl md:text-6xl font-black text-blue-900 leading-none uppercase italic tracking-tighter">
             Rainha <br /> da{" "}
-            <span className="text-pink-500 not-italic">Pinha</span>
+            <span className="text-pink-500 not-italic">Pinha 2026</span>
           </h2>
         </div>
 
