@@ -15,7 +15,7 @@ const Contest: React.FC = () => {
           </span>
           <h2 className="text-5xl md:text-6xl font-black text-blue-900 leading-none uppercase italic tracking-tighter">
             Rainha <br /> da{" "}
-            <span className="text-pink-500 not-italic">Pinha 2026</span>
+            <span className="text-pink-500 not-italic">Pinha</span>
           </h2>
         </div>
 
@@ -47,10 +47,10 @@ const Contest: React.FC = () => {
               </div>
               <div className="text-left">
                 <span className="block font-black text-yellow-400 text-lg leading-none uppercase tracking-wide">
-                  Carla Cristina
+                  Gisely
                 </span>
                 <span className="block font-bold text-white text-[10px] uppercase tracking-widest opacity-70">
-                  Rainha 2025
+                  Rainha 2026
                 </span>
               </div>
             </div>
@@ -84,11 +84,9 @@ const Contest: React.FC = () => {
               </h3>
 
               <p className="text-lg md:text-xl text-gray-600 leading-relaxed font-medium mb-6">
-                Nossa majestosa Rainha da Pinha de 2025,{" "}
-                <span className="text-pink-500 font-bold">Carla Cristina</span>,
-                elevou o nome de Presidente Dutra com sua graça e simpatia
-                incomparáveis. Sua vitória representa a força da mulher
-                sertaneja e o legado da nossa amada capital mundial da pinha.
+                Nossa majestosa Rainha da Pinha de 2026,{" "}
+                <span className="text-pink-500 font-bold">Gisely</span>,
+                 brilha com uma beleza radiante e a simpatia que só ela possui. Seu reinado exalta o encanto e a sofisticação da mulher de Presidente Dutra, honrando com extrema elegância o legado da nossa capital mundial da pinha.
               </p>
 
               <div className="flex items-center justify-center lg:justify-start gap-2 text-pink-500 font-black uppercase tracking-[0.2em] text-[10px] md:text-xs">
