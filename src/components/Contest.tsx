@@ -27,7 +27,7 @@ const Contest: React.FC = () => {
 
             <div className="relative z-10 bg-blue-950 rounded-[4rem] aspect-[421/485] md:aspect-[476/589] w-full overflow-hidden shadow-2xl transform hover:-rotate-1 transition-transform duration-700 border-8 border-white">
               <img
-                src="/carla_cristina.webp"
+                src="/gisely.webp"
                 alt="Rainha da Pinha 2025"
                 loading="lazy"     
                 decoding="async"    
